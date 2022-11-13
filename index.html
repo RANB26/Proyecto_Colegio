@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio pies descalzos</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Pies descalzos</h1>
+        </div>
+        <div class="logo">
+            <h1>Pies <br> descalzos</h1>
+            <div><img src="/IMG/Logo.png" alt=""></div>
+        </div>
+        <form class="formulario">
+            <div class="contenedor-campos">
+                <div class="campos">
+                    <label>NOMBRES </label><br>
+                    <input id="nombres" name="nombres" type="text" class="input-text">
+                </div>
+                <div class="campos">
+                    <label>APELLIDOS </label><br>
+                    <input id="apellidos" name="apellidos" type="text" class="input-text">
+                </div>
+                <div class="campos">
+                    <label>CURSO </label><br>
+                    <select name="curso" id="curso">
+                        <option value="6">Sexto</option>
+                        <option value="7">Septimo</option>
+                        <option value="8">Octavo</option>
+                        <option value="9">Noveno</option>
+                        <option value="10">Decimo</option>
+                        <option value="11">Once</option>
+                    </select>
+                </div>
+                <div class="campos">
+                    <label>EDAD </label><br>
+                    <input id="edad" type="number" min="0" max="100" class="input-text">
+                </div>
+                <div class="campos radio">
+                    <label>SEXO: </label>
+                    <div class="div-sexo">
+                        <input name="sexo" type="radio" value="Masculino" class="input-radio">Masculino
+                        <input name="sexo" type="radio" value="Femenino" class="input-radio">Femenino
+                    </div>
+                </div>
+                <div class="campos radio">
+                    <h6>ESTADO <br> CIVIL </h6>
+                    <div class="div-estado">
+                        <input name="e_civil" type="radio" value="Soltero" class="input-radio">Soltero
+                        <input name="e_civil" type="radio" value="Casado" class="input-radio">Casado
+                    </div>
+                    
+                </div>
+                <div class="campos radio">
+                    <h6>POBLACIÓN <br> VULNERABLE </h6>
+                    <div class="div-pv">
+                        <input name="p_vulnerable" type="radio" value="Si" class="input-radio">Si
+                        <input name="p_vulnerable" type="radio" value="No" class="input-radio">No
+                    </div>
+                    
+                </div>
+                <div class="campos">
+                    <label>UBICACIÓN </label><br>
+                    <select name="ubicacion" id="ubicacion">
+                        <option value="La playa">La playa</option>
+                        <option value="Malambo">Malambo</option>
+                        <option value="Barranquilla">Barranquilla</option>
+                        <option value="Galapa">Galapa</option>
+                    </select>
+                </div>
+            </div>
+            <div id="div-botones">
+                <div class="div-enviar">
+                    <input class="boton" id="enviar" type="submit" value="ENVIAR">
+                </div>
+                <div class="div-resultados">
+                    <input class="boton" id="resultados" type="submit" value="RESULTADOS">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal">
+        <div class="contenedor-modal">
+            <h2 class="titulo-modal"> RESULTADOS </h2>
+            <table>
+                <tr>
+                    <td><b>Personas mayores de edad:</b> </td>
+                    <td class = "td-personasmy" colspan="6"></td>
+                </tr>
+                <tr><td colspan="7"><br></td></tr>
+                <tr>
+                    <td rowspan="2"> <b>Personas por curso:</b> </td>
+                    <td>Sexto</td>
+                    <td>Septimo</td>
+                    <td>Octavo</td>
+                    <td>Noveno</td>
+                    <td>Decimo</td>
+                    <td>Once</td>
+                </tr>
+                <tr>
+                    <td class="td-0"></td>
+                    <td class="td-1"></td>
+                    <td class="td-2"></td>
+                    <td class="td-3"></td>
+                    <td class="td-4"></td>
+                    <td class="td-5"></td>
+                </tr>
+                <tr><td colspan="7"><br></td></tr>
+                <tr>
+                    <td rowspan="2"><b>Personas por genero:</b></td>
+                    <td colspan="3">Masculino</td>
+                    <td colspan="3">Femenino</td>
+                </tr>
+                <tr>
+                    <td class="td-masculino" colspan="3"></td>
+                    <td class="td-femenino" colspan="3"></td>
+                </tr>
+                <tr><td colspan="7"><br></td></tr>
+                <tr>
+                    <td><b>Personas en población vulnerable:</b> </td>
+                    <td class ="td-personaspv" colspan="6"></td>
+                </tr>
+                <tr><td colspan="7"><br></td></tr>
+                <tr>
+                    <td rowspan="2"><b>Personas por ubicación:</b></td>
+                    <td colspan="2">La playa</td>
+                    <td>Malambo</td>
+                    <td>Barranquilla</td>
+                    <td colspan="2">Galapa</td>
+                </tr>
+                <tr>
+                    <td class="td-laplaya" colspan="2"></td>
+                    <td class="td-malambo"></td>
+                    <td class="td-galapa"></td>
+                    <td class="td-barranquilla" colspan="2"></td>
+                </tr>
+            </table>
+            <div class="div-responsive">
+                <div class="datos">
+                    <label><b>Personas mayores de edad: </b></label><div class="div-personasmy"></div>
+                </div>
+                <div class="datos-varios">
+                    <label><b>Personas por curso </b></label>
+                    <div class="div-cursos">
+                        <div class="cursos"><h5>Sexto: </h5><div class="div-0"></div></div>
+                        <div class="cursos"><h5>Septimo: </h5><div class="div-1"></div></div>
+                        <div class="cursos"><h5>Octavo: </h5><div class="div-2"></div></div>  
+                    </div>
+                    <div class="div-cursos">
+                        <div class="cursos"><h5>Noveno: </h5><div class="div-3"></div></div>    
+                        <div class="cursos"><h5>Decimo: </h5><div class="div-4"></div></div>   
+                        <div class="cursos"><h5>Once: </h5><div class="div-5"></div></div>
+                    </div>
+                </div>
+                <div class="datos-varios">
+                    <label><b>Personas por genero </b></label>
+                    <div class="div-generos">
+                        <div class="generos"><h5>Masculino: </h5><div class="div-masculino"></div></div>
+                        <div class="generos"><h5>Femenino: </h5><div class="div-femenino"></div></div>
+                    </div>
+                </div>
+                <div class="datos">
+                    <label><b>Personas en población vulnerable: </b></label><div class="div-personaspv"></div>
+                </div>
+                <div class="datos-varios">
+                    <label><b>Personas por ubicación </b></label>
+                    <div class="div-ubicaciones">
+                        <div class="ubicaciones"><h5>La playa: </h5><div class="div-laplaya"></div></div>
+                        <div class="ubicaciones"><h5>Malambo: </h5><div class="div-malambo"></div></div>
+                    </div>
+                    <div class="div-ubicaciones">
+                        <div class="ubicaciones"><h5>Galapa: </h5><div class="div-barranquilla"></div></div>
+                        <div class="ubicaciones"><h5>Barranquilla: </h5><div class="div-galapa"></div></div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="cerrar-modal" value="X">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="JS/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

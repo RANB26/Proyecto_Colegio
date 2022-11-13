@@ -1,0 +1,411 @@
+/* Selectores más generales */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Tipos de fuentes utilizadas */
+@font-face{
+    font-family: sora;
+    src: url(Sora-Light.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: haditen;
+    src: url(Haditen.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: adam;
+    src: url(Adam-Light.ttf) format('truetype');
+}
+
+
+/* GLOBALES */
+
+/* Se le asigna un tipo de fuente a las ventanas de Sweet Alert */
+.swal2-popup {
+    font-family: sora;
+}
+
+body{
+    background-image:url(/IMG/Fondo-horizontal1.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor{
+    font-family: sora;
+    width: fit-content;
+    height: fit-content;
+    margin: 40px auto 0 auto;
+    display: flex;
+}
+
+.titulo{
+    display: none;
+    border-radius: 10px;
+    padding: 3px 0;
+}
+
+.titulo h1{
+    font-family: haditen;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    width: fit-content;
+}
+
+.logo{
+    background-color: #00636b;
+    height: auto;
+    width: fit-content;
+    border-radius: 15px 3px 3px 15px;
+    align-content: center;
+}
+
+.logo h1{
+    font-family: haditen;
+    font-size: 60px;
+    margin: 20px 60px 0px 60px;
+    text-align: center;
+    color: white;
+}
+
+.logo div{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.logo img{
+    width: 250px;
+    height: 310px;
+}
+
+.formulario{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 40px 20px 30px;
+    background-color:rgba(255, 255, 255, 0.75);
+    border-radius: 3px 15px 15px 3px;
+}
+
+.campos{
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.campos label, .campos h6{
+    font-weight: bold;
+    font-size: 12px;
+    width: fit-content;
+    text-align: left;
+    height: fit-content;
+    margin: auto 0;
+}
+
+.radio{
+    display: flex;
+}
+
+.input-text{
+    font-family: sora;
+    background-color: transparent;
+    border: transparent;
+    font-size: 18px;
+    border-bottom: 1px solid #00636b;
+    margin-top: 2px;
+    margin-bottom: 12px;
+    width: 260px;
+    outline: none;
+}
+
+select{
+    font-family: sora;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #00636b;
+    margin-top: 7px;
+    margin-bottom: 12px;
+    width: 260px;
+    outline: none;
+}
+
+.input-radio{
+    background-color: transparent;
+}
+
+.input-radio:hover{
+    cursor: pointer;
+}
+
+.div-sexo{
+    margin: auto 0 auto 22px;
+    height: fit-content;
+}
+
+.div-sexo input{
+    margin-right: 2px;
+}
+
+.div-sexo input:nth-child(2){
+    margin-left: 3px;
+}
+
+.div-estado{
+    margin: auto 0 auto 9px;
+    height: fit-content;
+}
+
+.div-estado input{
+    margin-right: 2px;
+}
+
+.div-estado input:nth-child(2){
+    margin-left: 24px;
+}
+
+.div-pv{
+    margin: auto 0 auto 22px;
+    height: fit-content;
+}
+
+.div-pv input{
+    margin-right: 2px;
+}
+
+.div-pv input:nth-child(2){
+    margin-left: 25px;
+}
+
+#div-botones{
+    display: flex;
+}
+
+.div-enviar{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.div-resultados{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: none;
+}
+
+.boton{
+    font-family: sora;
+    font-size: 15px;
+    background-color: #00636b;
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    transition: 0.40s;
+    margin: 0 auto 0 auto;
+}
+
+.boton:hover{
+    background-color: #003a3e;
+    cursor: pointer;
+}
+
+/* CSS Modal */
+
+.modal{
+    font-family: sora;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+.contenedor-modal{
+    width: fit-content;
+    background-color: white;
+    margin: auto;
+    border-radius: 6px;
+    padding: 2.5em 2em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.titulo-modal{
+    font-size: 1.8em;
+}
+
+.cerrar-modal{
+    font-family: adam;
+    font-size: 2em;
+    position:absolute;
+    width: fit-content;
+    border: none;
+    background-color:transparent;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+    top: 40px;
+    right: 62px;
+    transition: 0.2s;
+}
+
+.cerrar-modal:hover{
+    cursor:pointer;
+    color: rgb(121, 121, 121);
+}
+
+table *{
+    text-align: center;
+    padding: 5px;
+}
+
+table{
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.36);
+    border-radius: 10px;
+}
+
+
+/* CONTENIDO RESPONSIVE */
+
+.div-responsive{
+    display: none;
+    text-align: center;
+}
+
+.div-responsive div, .div-responsive h5{
+    width: fit-content;
+    padding: 3px;
+}
+
+.div-responsive label{
+    margin: auto;
+    margin-right: 2px;
+}
+
+.div-responsive h5{
+    margin-right: 2px;
+}
+
+.div-responsive .datos, .div-responsive .datos-varios{
+    margin: 22px auto;
+}
+
+.div-responsive .datos{
+    display: flex;
+}
+
+.div-responsive .div-cursos{
+    width: fit-content;
+    margin: 4px auto;
+    display: flex;
+}
+
+.div-responsive .cursos{
+    display: flex;
+    margin: 3px 5px;
+}
+
+.div-responsive .div-generos{
+    width: fit-content;
+    margin: 4px auto;
+    display: flex;
+}
+
+.div-responsive .generos{
+    display: flex;
+    margin: 4px;
+}
+
+.div-responsive .div-ubicaciones{
+    width: fit-content;
+    margin: 4px auto;
+    display: flex;
+}
+
+.div-responsive .ubicaciones{
+    display: flex;
+    margin: 5px;
+}
+
+
+
+@media(width <= 1100px){
+    body{
+        background-image:url(/IMG/Fondo-horizontal2.png);
+    }
+}
+@media(width <= 750px){
+
+    body{
+        background-image:url(/IMG/Fondo-vertical1.png);
+    }
+
+    .contenedor{
+        display: block;
+        background-color: rgba(0, 109, 117, 0.76);
+        border-radius: 15px;
+    }
+
+    .contenedor-modal{
+        padding: 1.5em 2em;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .titulo{
+        display: block;
+    }
+
+    .formulario{
+        border-radius: 15px;
+    }
+
+    table{
+        display: none;
+    }
+
+    .div-responsive{
+        display: block;
+    }
+
+    .cerrar-modal{
+        top: 25px;
+        right: 30px;
+    }
+
+}
+@media(width <= 450px){
+    body{
+        background-image:url(/IMG/Fondo-vertical2.png);
+    }
+}
