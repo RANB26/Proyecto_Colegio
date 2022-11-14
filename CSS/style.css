@@ -31,7 +31,7 @@
 }
 
 body{
-    background-image:url(/IMG/Fondo-horizontal1.png);
+    background-image:url(../IMG/Fondo-horizontal1.png);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -45,21 +45,7 @@ body{
     display: flex;
 }
 
-.titulo{
-    display: none;
-    border-radius: 10px;
-    padding: 3px 0;
-}
-
-.titulo h1{
-    font-family: haditen;
-    font-size: 40px;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    width: fit-content;
-}
-
+/* Parte izquierda del contenedor */
 .logo{
     background-color: #00636b;
     height: auto;
@@ -137,10 +123,6 @@ select{
     outline: none;
 }
 
-.input-radio{
-    background-color: transparent;
-}
-
 .input-radio:hover{
     cursor: pointer;
 }
@@ -201,6 +183,7 @@ select{
     display: none;
 }
 
+/* Clase boton aplicada a los botones enviar y resultado */
 .boton{
     font-family: sora;
     font-size: 15px;
@@ -218,7 +201,7 @@ select{
     cursor: pointer;
 }
 
-/* CSS Modal */
+/* CSS MODAL */
 
 .modal{
     font-family: sora;
@@ -261,6 +244,7 @@ select{
     font-size: 1.8em;
 }
 
+/* Boton "X" */
 .cerrar-modal{
     font-family: adam;
     font-size: 2em;
@@ -295,6 +279,23 @@ table{
 
 /* CONTENIDO RESPONSIVE */
 
+/* Titulo del formulario responsive */
+.titulo{
+    display: none;
+    border-radius: 10px;
+    padding: 3px 0;
+}
+
+.titulo h1{
+    font-family: haditen;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    width: fit-content;
+}
+
+/* Contenedor-modal responsive */
 .div-responsive{
     display: none;
     text-align: center;
@@ -359,13 +360,13 @@ table{
 
 @media(width <= 1100px){
     body{
-        background-image:url(/IMG/Fondo-horizontal2.png);
+        background-image:url(../IMG/Fondo-horizontal2.png);
     }
 }
 @media(width <= 750px){
 
     body{
-        background-image:url(/IMG/Fondo-vertical1.png);
+        background-image:url(../IMG/Fondo-vertical1.png);
     }
 
     .contenedor{
@@ -406,6 +407,6 @@ table{
 }
 @media(width <= 450px){
     body{
-        background-image:url(/IMG/Fondo-vertical2.png);
+        background-image:url(../IMG/Fondo-vertical2.png);
     }
 }
